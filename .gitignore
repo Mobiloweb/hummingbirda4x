@@ -1,6 +1,3 @@
 node_modules
-assets
-!assets/fonts/fontello
-!assets/img
 .env
 coverage
