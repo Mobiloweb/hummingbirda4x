@@ -4,10 +4,14 @@ $component-name: product-miniature;
   margin-bottom: 1.25rem;
 
   .card {
-    transition: 0.25s ease-out;
 
     &:hover {
-      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+      filter: none;
+    }
+
+    a img {
+      min-height: 318px;
+      object-fit: contain;
     }
   }
 

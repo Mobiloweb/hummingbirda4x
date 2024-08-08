@@ -24,10 +24,18 @@
            data-id-search="{$as_search.id_search|intval}">
         <div id="PM_ASBlock_{$as_search.id_search|intval}" class="card bg-dark p-4 rounded-0 h-100 justify-content-center">
           <div class="card-header{if empty($as_search.title)} hidden-sm-up{/if} text-start p-0">
-            <h2 class="PM_ASearchTitle text-white my-2">
-              {if $as_search.id_search != "2"}
-                {$searchEngineTitle}
+              {if $as_search.id_search != "2" && $page.page_name !== 'index'}
+                <h2 class="PM_ASearchTitle text-white my-2">
+                    {$searchEngineTitle}
+                </h2>
               {/if}
+
+            {if $as_search.id_search == "2" && $page.page_name !== 'index'}
+              <h2 class="PM_ASearchTitle text-white my-2 text-uppercase">
+                <span class="d-block">Sélectionnez</span> <b class="fs-1">votre véhicule</b>
+              </h2>
+            {/if}
+
               {if $as_search.display_nb_result_on_blc}
                 <small class="PM_ASBlockNbProductValue">
                 ({$as_search.total_products|intval} {if $as_search.total_products > 1}{l s='products' mod='pm_advancedsearch4'}{else}{l s='product' mod='pm_advancedsearch4'}{/if})

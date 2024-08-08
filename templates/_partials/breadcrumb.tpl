@@ -4,9 +4,9 @@
  *}
  {$componentName = 'breadcrumb'}
 
-<nav data-depth="{$breadcrumb.count}" class="{$componentName}__wrapper" aria-label="{$componentName}">
-  <div class="container">
-    <ol class="{$componentName}">
+<nav data-depth="{$breadcrumb.count}" class="{$componentName}__wrapper mb-0 bg-light" aria-label="{$componentName}">
+  <div class="container-fluid">
+    <ol class="{$componentName} fs-6">
       {block name='breadcrumb'}
         {foreach from=$breadcrumb.links item=path name=breadcrumb}
           {block name='breadcrumb_item'}

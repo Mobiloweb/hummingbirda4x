@@ -15,4 +15,6 @@ export default {
   updatedProduct: 'updatedProduct',
   updateFacets: 'updateFacets',
   updatedDeliveryForm: 'updatedDeliveryForm',
+
+  clickProductImageZoomIn: 'clickProductImageZoomIn'
 };

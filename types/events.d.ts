@@ -15,4 +15,6 @@ declare type EVENTS = {
   updatedProduct: string,
   updateFacets: string,
   updatedDeliveryForm: string,
+
+  clickProductImageZoomIn: string,
 }

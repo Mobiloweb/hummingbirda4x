@@ -27,6 +27,8 @@ import './modules/facetedsearch';
 import initDesktopMenu from './modules/ps_mainmenu';
 import initFormValidation from './form-validation';
 
+import initProductImagesZoomIn from "./product-images-zoom-in";
+
 initEmitter();
 
 $(() => {
@@ -48,6 +50,8 @@ $(() => {
   initFormValidation();
   initErrorHandler();
   usePasswordPolicy('.field-password-policy');
+
+  initProductImagesZoomIn();
 
   prestashop.on(events.responsiveUpdate, () => {
     initSearchbar();
@@ -81,4 +85,6 @@ export default {
   initMobileMenu,
   initVisiblePassword,
   initDesktopMenu,
+
+  initProductImagesZoomIn
 };

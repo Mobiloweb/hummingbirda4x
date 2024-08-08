@@ -8,8 +8,7 @@
   {if $product.images|@count > 0}
     <div
       id="product-images"
-      class="carousel slide js-product-carousel"
-      data-bs-ride="carousel"
+      class="carousel slide js-product-carousel rounded-0"
       >
 
       <div class="carousel-inner">
@@ -30,7 +29,7 @@
         {block name='product_cover'}
           {foreach from=$product.images item=image key=key name=productImages}
 
-            <div class="carousel-item{if $image.id_image == $product.default_image.id_image} active{/if}"
+            <div class="carousel-item zoomable {if $image.id_image == $product.default_image.id_image}active{/if}"
               data-bs-target="#product-images-modal"
               data-bs-slide-to="{$key}"
               >
@@ -58,7 +57,7 @@
                 {/if}
 
                 <img
-                  class="img-fluid"
+                  class="img-fluid zoomable__img"
                   srcset="
                     {$image.bySize.default_md.url} 320w,
                     {$image.bySize.product_main.url} 720w,

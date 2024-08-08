@@ -28,23 +28,23 @@
               <div class="carousel-item{if $image.id_image == $product.default_image.id_image} active{/if}">
                 <picture>
                   {if isset($image.bySize.default_md.sources.avif)}
-                    <source 
+                    <source
                       srcset="
                         {$image.bySize.default_md.sources.avif} 320w,
                         {$image.bySize.product_main.sources.avif} 720w,
                         {$image.bySize.product_main_2x.sources.avif} 1440w"
-                      sizes="(min-width: 1300px) 720px, (min-width: 768px) 50vw, 100vw" 
+                      sizes="(min-width: 1300px) 720px, (min-width: 768px) 50vw, 100vw"
                       type="image/avif"
                     >
                   {/if}
 
                   {if isset($image.bySize.default_md.sources.webp)}
-                    <source 
+                    <source
                       srcset="
                         {$image.bySize.default_md.sources.webp} 320w,
                         {$image.bySize.product_main.sources.webp} 720w,
                         {$image.bySize.product_main_2x.sources.webp} 1440w"
-                      sizes="(min-width: 1300px) 720px, (min-width: 768px) 50vw, 100vw" 
+                      sizes="(min-width: 1300px) 720px, (min-width: 768px) 50vw, 100vw"
                       type="image/webp"
                     >
                   {/if}
@@ -55,8 +55,8 @@
                       {$image.bySize.default_md.url} 320w,
                       {$image.bySize.product_main.url} 720w,
                       {$image.bySize.product_main_2x.url} 1440w"
-                    sizes="(min-width: 1300px) 720px, (min-width: 768px) 50vw, 100vw" 
-                    src="{$image.bySize.product_main.url}" 
+                    sizes="(min-width: 1300px) 720px, (min-width: 768px) 50vw, 100vw"
+                    src="{$image.bySize.product_main.url}"
                     width="{$image.bySize.product_main.width}"
                     height="{$image.bySize.product_main.height}"
                     loading="{if $smarty.foreach.productImages.first}eager{else}lazy{/if}"

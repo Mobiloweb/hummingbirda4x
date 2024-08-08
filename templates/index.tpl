@@ -25,9 +25,11 @@
 
         {block name='page_content_container'}
           <section aria-label="Sélectionnez votre véhicule">
-            <div class="d-flex flex-column flex-xl-row gap-2 mt-2 bg-white">
-              <div class="order-1 order-xl-0 col-xl-3 col-xxl-4 position-relative container">
-                {widget name="pm_advancedsearch4" id_search_engine="2"}
+            <div class="d-flex flex-column flex-xl-row gap-2 mt-2">
+              <div class="order-1 order-xl-0 col-xl-3 col-xxl-4 position-relative container-fluid bg-dark">
+                <div class="container h-100">
+                  {widget name="pm_advancedsearch4" id_search_engine="2"}
+                </div>
               </div>
               <div class="order-0 order-xl-1 col-xl-9 col-xxl-8">
                 {widget name="ps_imageslider"}

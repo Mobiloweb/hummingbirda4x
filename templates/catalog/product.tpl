@@ -28,9 +28,13 @@
   {include file='_partials/microdata/product-jsonld.tpl'}
 {/block}
 
+{block name="header" append}
+  {widget name="pm_advancedsearch4" id_search_engine="2"}
+{/block}
+
 {block name='content'}
   {* FIRST PART - PHOTO, NAME, PRICES, ADD TO CART*}
-  <div class="row g-4 g-xl-5 product js-product-container">
+  <div class="row g-4 g-xl-5 product js-product-container mt-4">
     <div class="product__left col-lg-6 col-xl-7">
       {block name='product_cover_thumbnails'}
         {include file='catalog/_partials/product-cover-thumbnails.tpl'}
@@ -39,7 +43,7 @@
 
     <div class="product__col col-lg-6 col-xl-5">
       {block name='product_header'}
-        <h1 class="h4 product__name">{block name='page_title'}{$product.name}{/block}</h1>
+        <h1 class="h4 product__name page-title-section fs-2 fw-bold">{block name='page_title'}{$product.name}{/block}</h1>
       {/block}
 
       {block name='product_prices'}
@@ -188,9 +192,9 @@
     {hook h='displayFooterProduct' product=$product category=$category}
   {/block}
 
-  {block name='product_images_modal'}
-    {include file='catalog/_partials/product-images-modal.tpl'}
-  {/block}
+{*  {block name='product_images_modal'}*}
+{*    {include file='catalog/_partials/product-images-modal.tpl'}*}
+{*  {/block}*}
 
   {block name='page_footer_container'}
     {block name='page_footer'}
