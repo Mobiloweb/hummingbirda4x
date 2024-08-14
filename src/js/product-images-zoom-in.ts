@@ -1,4 +1,8 @@
 // @ts-nocheck
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import PhotoSwipe from 'photoswipe';
+
+import 'photoswipe/style.css';
 
 import selectorsMap from './constants/selectors-map';
 
@@ -24,6 +28,14 @@ class Zoomable {
     this.img.draggable = false;
     this.element.style.setProperty("--zoom", this.initialZoom);
 
+    this._handleMouseover = this._handleMouseover.bind(this);
+    this._handleMousemove = this._handleMousemove.bind(this);
+    this._handleMouseout = this._handleMouseout.bind(this);
+    this._handleWheel = this._handleWheel.bind(this);
+    this._handleTouchstart = this._handleTouchstart.bind(this);
+    this._handleTouchmove = this._handleTouchmove.bind(this);
+    this._handleTouchend = this._handleTouchend.bind(this);
+
     this._addEventListeners();
   }
 
@@ -32,22 +44,13 @@ class Zoomable {
   }
 
   _addEventListeners() {
-    this.element.addEventListener("mouseover", () =>
-      this._handleMouseover()
-    );
-    this.element.addEventListener("mousemove", (evt) =>
-      this._handleMousemove(evt)
-    );
-    this.element.addEventListener("mouseout", () => this._handleMouseout());
-    this.element.addEventListener("wheel", (evt) => this._handleWheel(evt));
-
-    this.element.addEventListener("touchstart", (evt) =>
-      this._handleTouchstart(evt)
-    );
-    this.element.addEventListener("touchmove", (evt) =>
-      this._handleTouchmove(evt)
-    );
-    this.element.addEventListener("touchend", () => this._handleTouchend());
+    this.element.addEventListener("mouseover", this._handleMouseover);
+    this.element.addEventListener("mousemove", this._handleMousemove);
+    this.element.addEventListener("mouseout", this._handleMouseout);
+    this.element.addEventListener("wheel", this._handleWheel);
+    this.element.addEventListener("touchstart", this._handleTouchstart);
+    this.element.addEventListener("touchmove", this._handleTouchmove);
+    this.element.addEventListener("touchend", this._handleTouchend);
   }
 
   _handleMouseover() {
@@ -138,20 +141,52 @@ class Zoomable {
       ...(typeof config === "object" ? config : {})
     };
   }
+
+  destroy() {
+    this.element.removeEventListener("mouseover", this._handleMouseover);
+    this.element.removeEventListener("mousemove", this._handleMousemove);
+    this.element.removeEventListener("mouseout", this._handleMouseout);
+    this.element.removeEventListener("wheel", this._handleWheel);
+    this.element.removeEventListener("touchstart", this._handleTouchstart);
+    this.element.removeEventListener("touchmove", this._handleTouchmove);
+    this.element.removeEventListener("touchend", this._handleTouchend);
+  }
 }
 
 export default function initProductImagesZoomIn() {
   const {prestashop, Theme: {events}} = window;
 
-  prestashop.on(events.clickProductImageZoomIn, (elm:HTMLElement) => {
-    window.alert("Clickouille")
-  })
-}
+  let zoomablesInstances = [];
 
-document.addEventListener('DOMContentLoaded', () => {
-  const zoomables = document.querySelectorAll(".zoomable");
+  function toggleZoomable() {
+    zoomablesInstances.forEach(instance => instance.destroy());
+    zoomablesInstances = [];
 
-  for (const el of zoomables) {
-    new Zoomable(el);
+    if (window.innerWidth >= 992) {
+      const zoomables = document.querySelectorAll(".zoomable");
+
+      for (const el of zoomables) {
+        zoomablesInstances.push(new Zoomable(el));
+      }
+    }
   }
-})
+
+  $(document).ready(() => {
+    toggleZoomable();
+    window.addEventListener('resize', () => toggleZoomable())
+
+    new PhotoSwipeLightbox({
+      gallery: '#product-images',
+      children: 'a',
+      pswpModule: PhotoSwipe,
+      spacing: 0.12,
+      bgOpacity: 0.8,
+      maxSpreadZoom: 2,
+      getDoubleTapZoom: (isMouseClick, item) => {
+        return item.initialZoomLevel < 0.7 ? 1 : item.initialZoomLevel;
+      },
+      allowPanToNext: false,
+      pinchToClose: false,
+    }).init();
+  });
+}

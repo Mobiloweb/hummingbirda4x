@@ -40,7 +40,6 @@
     "bootstrap-touchspin": "^4.3.0",
     "bourbon": "^7.0.0",
     "clean-webpack-plugin": "^4.0.0",
-    "css-loader": "^5.2.7",
     "css-minimizer-webpack-plugin": "^3.1.1",
     "cssjanus": "^2.1.0",
     "dotenv": "^10.0.0",
@@ -89,6 +88,7 @@
     "jquery.browser": "^0.1.0",
     "material-design-icons-iconfont": "^6.7.0",
     "nouislider": "^15.5.0",
+    "photoswipe": "^5.4.4",
     "sprintf-js": "^1.1.2",
     "vazirmatn": "^32.102.0",
     "wnumb": "^1.2.0"
