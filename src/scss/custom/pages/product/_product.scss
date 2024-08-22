@@ -22,6 +22,10 @@
       .carousel {
         overflow: hidden;
         border-radius: 8px;
+
+        &-item {
+          border: 1px solid #e6e6e6;
+        }
       }
 
       &__modal-opener {
@@ -44,6 +48,25 @@
 
     &__description-short {
       margin-bottom: 1.5rem;
+
+      h2 {
+        margin-bottom: 0.5rem;
+        font-weight: 400;
+        font-family: "Manrope", sans-serif!important;
+        line-height: 1.1;
+        font-size: 1.3rem;
+        margin-top: 0;
+        color: #000;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 40px;
+          height: 4px;
+          background-color: #efefef;
+          margin-top: 4px;
+        }
+      }
     }
 
     &__tax-label {
@@ -98,7 +121,13 @@
     }
 
     &__add-to-cart {
-      margin-bottom: 2rem;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #ddd;
+      margin: 30px 0;
+      border-radius: 5px;
+      padding: 30px;
+      width: fit-content;
 
       .product-actions__button button {
         width: 100%;
@@ -129,10 +158,16 @@
 
 // Needs to be outside of the .page-product scope because it can be inside a modal
 .thumbnails__container {
+
   .thumbnail {
     img {
-      border: 2px solid transparent;
+      border: 1px solid #e6e6e6;
       border-radius: 8px;
+
+      &:hover {
+        border: 1px solid $primary;
+        cursor: pointer;
+      }
     }
 
     &.active img {

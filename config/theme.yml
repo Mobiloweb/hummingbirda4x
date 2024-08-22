@@ -99,7 +99,7 @@ global_settings:
       displaySearch:
         - ps_searchbar
       displayProductAdditionalInfo:
-        - ps_sharebuttons
+#        - ps_sharebuttons
       displayOrderConfirmation2:
         - ps_featuredproducts
       displayCrossSellingShoppingCart:

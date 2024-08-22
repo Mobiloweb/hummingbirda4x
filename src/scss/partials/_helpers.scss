@@ -24,3 +24,11 @@
 .text-gray {
   color: var(--bs-gray-700);
 }
+
+// Extend bootstrap to add a new fill-#{$color} used to colorize svg implemented with the templating system (smarty includes)
+@each $color, $value in $theme-colors {
+  .fill-#{$color} svg, .fill-#{$color} path,
+  svg .fill-#{$color} svg, path.fill-#{$color} {
+    fill: $value!important;
+  }
+}

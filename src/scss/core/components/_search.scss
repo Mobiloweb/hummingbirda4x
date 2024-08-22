@@ -71,6 +71,7 @@ $component-name: search;
 
     &__dropdown {
       position: absolute;
+      z-index: 2;
       top: calc(100% + 1rem);
       right: 0;
       width: 100vw;

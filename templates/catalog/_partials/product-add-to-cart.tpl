@@ -53,7 +53,7 @@
 
         <div class="product-actions__button add col">
           <button
-            class="btn btn-primary text-white"
+            class="btn btn-lg btn-dark text-white"
             data-button-action="add-to-cart"
             type="submit"
             {if !$product.add_to_cart_url}

@@ -18,7 +18,7 @@
   {assign var="append" value=["button"=>"increment", "icon"=>$increment_icon, "confirm_icon"=>$submit_icon]}
 {/if}
 
-<div class="input-group flex-nowrap{if isset($marginHelper)} {$marginHelper}{else} mb-3{/if}">
+<div class="input-group flex-nowrap h-100">
   <button role="button" aria-label="{$prepend.button}" class="btn {$prepend.button} js-{$prepend.button}-button" type="button">
     {include file="_svg/dash.svg"}
     <div class="spinner-border spinner-border-sm align-middle d-none" role="status"></div>
@@ -29,7 +29,7 @@
       {$key}="{$value}"
     {/foreach}
     {* The default attributes, will be used if not defined *}
-      class="form-control"
+      class="form-control h-100"
       name="qty"
       aria-label="{l s='Quantity' d='Shop.Theme.Actions'}"
       type="text"
