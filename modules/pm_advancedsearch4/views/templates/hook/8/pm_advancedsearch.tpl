@@ -26,7 +26,7 @@
               <p class="PM_ASShowCriterionsGroupHidden col-xs-12{if isset($as_search.advanced_search_open) && $as_search.advanced_search_open} PM_ASShowCriterionsGroupHiddenOpen{/if}"><a href="#">{l s='Show/hide more options' mod='pm_advancedsearch4'}</a></p>
             {/if}
 
-            <div id="PM_ASCriterionsGroup_{$as_search.id_search|intval}_{$criterions_group.id_criterion_group|intval}" class="{if $page.page_name !== 'index'}col-lg-3{/if} {if isset($as_search.seo_criterion_groups) && is_array($as_search.seo_criterion_groups) && in_array($criterions_group.id_criterion_group,$as_search.seo_criterion_groups)}PM_ASCriterionsSEOGroupDisabled {/if}PM_ASCriterionsGroup{if $criterions_group.hidden} PM_ASCriterionsGroupHidden{/if}{if $as_search.hide_empty_crit_group && $as_search.step_search && (!isset($as_search.criterions[$criterions_group.id_criterion_group]) || !sizeof($as_search.criterions[$criterions_group.id_criterion_group]))} PM_ASCriterionsGroupHidden{/if} PM_ASCriterionsGroup{$criterions_group.criterion_group_type|ucfirst} {if !preg_match('/.*(left|right)column$/i', $hookName)}{$criterions_group.css_classes}{/if}"{if isset($as_search.advanced_search_open) && $as_search.advanced_search_open} style="display:block;"{/if}>
+            <div id="PM_ASCriterionsGroup_{$as_search.id_search|intval}_{$criterions_group.id_criterion_group|intval}" class="{if $page.page_name !== 'index' && $page.page_name !== 'category'}col-lg-3{/if} {if isset($as_search.seo_criterion_groups) && is_array($as_search.seo_criterion_groups) && in_array($criterions_group.id_criterion_group,$as_search.seo_criterion_groups)}PM_ASCriterionsSEOGroupDisabled {/if}PM_ASCriterionsGroup{if $criterions_group.hidden} PM_ASCriterionsGroupHidden{/if}{if $as_search.hide_empty_crit_group && $as_search.step_search && (!isset($as_search.criterions[$criterions_group.id_criterion_group]) || !sizeof($as_search.criterions[$criterions_group.id_criterion_group]))} PM_ASCriterionsGroupHidden{/if} PM_ASCriterionsGroup{$criterions_group.criterion_group_type|ucfirst} {if !preg_match('/.*(left|right)column$/i', $hookName)}{$criterions_group.css_classes}{/if}"{if isset($as_search.advanced_search_open) && $as_search.advanced_search_open} style="display:block;"{/if}>
               {include file=$as_obj->getTplPath("pm_advancedsearch_criterions.tpl")}
             </div>
             {if $as_search.step_search && $next_id_criterion_group_isset == false && !isset($as_search.criterions[$criterions_group.id_criterion_group])}
@@ -34,10 +34,9 @@
             {/if}
           {/if}
         {/foreach}
-
         {if $as_search.search_method == 2 || $as_search.search_method == 4 && $page.page_name !== 'index'}
-          <p class="col-lg-3 d-flex align-items-center">
-            <input type="submit" value="{l s='Search' mod='pm_advancedsearch4'}" name="submitAsearch" class="as5_submit btn btn-primary PM_ASSubmitSearch text-white text-uppercase w-100 py-2" /></p>
+          <p class="col-xs-12 text-center mt-4 submit-wrapper">
+            <input type="submit" value="{l s='Search' mod='pm_advancedsearch4'}" name="submitAsearch" class="btn btn-primary PM_ASSubmitSearch text-white text-uppercase py-2" /></p>
         {/if}
       </div><!-- .PM_ASCriterionsGroupList -->
       {$smarty.capture.as4_input_hidden_criterions nofilter}{* HTML *}
@@ -64,8 +63,8 @@
       <input type="hidden" name="orderby"{if isset($smarty.get.order) && $smarty.get.order} value="{$smarty.get.order}"{else} disabled="disabled"{/if} />
       <input type="hidden" name="n"{if isset($smarty.get.n) && $smarty.get.n} value="{$smarty.get.n|intval}"{else} disabled="disabled"{/if} />
       {if $as_search.search_method == 2 || $as_search.search_method == 4 && $page.page_name === 'index'}
-        <p class="col-xs-12 text-center mt-4">
-          <input type="submit" value="{l s='Search' mod='pm_advancedsearch4'}" name="submitAsearch" class="btn btn-primary PM_ASSubmitSearch text-white text-uppercase w-100 py-2" /></p>
+        <p class="col-xs-12 text-center mt-4 submit-wrapper">
+          <input type="submit" value="{l s='Search' mod='pm_advancedsearch4'}" name="submitAsearch" class="btn btn-primary PM_ASSubmitSearch text-white text-uppercase py-2" /></p>
       {/if}
 
       {if isset($smarty.get.id_seo)}

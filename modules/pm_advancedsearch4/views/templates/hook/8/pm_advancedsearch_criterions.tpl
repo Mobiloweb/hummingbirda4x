@@ -12,7 +12,7 @@
         {if $criterions_group.icon}
           <img src="{$as_path nofilter}search_files/criterions_group/{$criterions_group.icon}" alt="{$criterions_group.name}" title="{$criterions_group.name}" id="PM_ASCriterionsGroupIcon_{$as_search.id_search|intval}_{$criterions_group.id_criterion_group|intval}" class="PM_ASCriterionsGroupIcon" />
         {/if}
-        <span class="PM_ASCriterionsGroupName text-white fw-light fs-6">
+        <span class="PM_ASCriterionsGroupName">
 		{$criterions_group.name}
 	</span>
       </p>
