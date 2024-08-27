@@ -3,8 +3,13 @@
  * file that was distributed with this source code.
  *}
 
-{* Full width layout only for "Recherche par Type d'Accessoire" page *}
-{if $category.id == '29815'}
+{* Full width layout only for "Recherche par Type d'Accessoire" and "RECHERCHER VOTRE PRODUIT" pages *}
+{if $category.id == '29815' || $category.id == '29814'}
+  {$layout = 'layouts/layout-full-width.tpl'}
+{/if}
+
+{* Full width layout if we are on the last category depth*}
+{if $category['level_depth'] == Category::getLastPosition($category['id_parent'], $category['id_shop_default'])}
   {$layout = 'layouts/layout-full-width.tpl'}
 {/if}
 

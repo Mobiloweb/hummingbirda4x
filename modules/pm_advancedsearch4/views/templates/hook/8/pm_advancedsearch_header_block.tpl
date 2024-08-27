@@ -8,7 +8,7 @@
      class="PM_ASBlockOutput PM_ASBlockOutputVertical{if $as_mobileVisible|default:false} PM_ASMobileVisible{/if}"{if empty($as_search.criterions)} style="display:none"{/if}
      data-id-search="{$as_search.id_search|intval}">
 
-  <div id="PM_ASBlock_{$as_search.id_search|intval}" class="card shadow">
+  <div id="PM_ASBlock_{$as_search.id_search|intval}" class="card">
     {if $searchEngineTitle}
       <div class="card-header">
 				<span class="PM_ASBlockTitle">{$searchEngineTitle}{if $as_search.display_nb_result_on_blc}

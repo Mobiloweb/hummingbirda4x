@@ -92,3 +92,20 @@
     }
   }
 }
+
+.PM_ASCriterionGroupCheckbox {
+  li {
+    margin-bottom: 13px;
+    text-transform: uppercase;
+    & > .checkbox, & > .radio {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
+}
+
+#left-column .PM_ASBlockOutputVertical {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
