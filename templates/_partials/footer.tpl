@@ -6,7 +6,7 @@
 <section class="footer__main px-3 px-xxl-5">
   <div class="footer__main-container d-flex flex-column flex-lg-row container-fluid gap-3 gap-xxl-5">
     <div class="w-100 d-flex flex-column align-items-lg-start align-items-center gap-4 footer__description">
-      <a href="/" title="Page d'accueil d'AccessAuto4x4" aria-label="Retour sur la page d'accueil de AccessAuto4x4"><img class="img-fluid footer__logo" src="https://accessauto4x4.com/themes/at_autozpro/assets/img/modules/appagebuilder/images/logo-a4x-400x200-W-003.png" alt="Accessauto4x4 logo" loading="lazy"></a>
+      <a href="/" title="Page d'accueil d'AccessAuto4x4" aria-label="Retour sur la page d'accueil de AccessAuto4x4"><img class="img-fluid footer__logo" src="https://accessauto4x4.com/themes/at_autozpro/assets/img/modules/appagebuilder/images/logo-a4x-400x200-W-003.webp" alt="Accessauto4x4 logo" loading="lazy"></a>
       <p class="footer__description-text mb-0 w-100 text-center text-lg-start">Nous sommes AccessAuto4x4, vos spécialistes des accessoires automobiles, des 4x4, des SUV et des véhicules utilitaires. Notre large gamme de produits conformes aux normes des fabricants s'adapte parfaitement aux modèles de vos véhicules.</p>
       <a href="/contactez-nous" title="Notre page de contact" aria-label="Bouton de contact" class="btn btn-primary btn-lg footer__contact-button">Nous contacter</a>
     </div>
