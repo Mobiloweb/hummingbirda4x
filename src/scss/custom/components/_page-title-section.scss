@@ -1,0 +1,13 @@
+$component-name: page-title-section;
+
+.#{$component-name} {
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 0;
+      width: 0;
+      border-bottom: 30px solid #7a9b00;
+      border-left: 65px solid transparent;
+      margin-right: 12px;
+  }
+}

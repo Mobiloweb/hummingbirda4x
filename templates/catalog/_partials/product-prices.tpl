@@ -6,7 +6,7 @@
   <div class="product__prices js-product-prices">
     {block name='product_price'}
       <div class="prices__wrapper d-flex align-items-center mb-1">
-        <div class="product__current-price">
+        <div class="product__current-price fs-1">
           {capture name='custom_price'}{hook h='displayProductPriceBlock' product=$product type='custom_price' hook_origin='product_sheet'}{/capture}
 
           {if '' !== $smarty.capture.custom_price}
@@ -66,9 +66,7 @@
     {/block}
     {** OTHER PRICES TO STLYE LATER *}
 
-    {hook h='displayProductPriceBlock' product=$product type="weight" hook_origin='product_sheet'}
-
-    <div class="product__tax-label">
+    <div class="product__tax-label fs-6 text-secondary">
       {if !$configuration.taxes_enabled}
         {l s='No tax' d='Shop.Theme.Catalog'}
       {elseif $configuration.display_taxes_label}

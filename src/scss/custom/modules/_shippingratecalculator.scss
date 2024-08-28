@@ -1,0 +1,17 @@
+#product {
+  .fmm-sc-wrapper strong, .fmm-sc-wrapper p {
+    text-transform: initial;
+  }
+
+  .list-group {
+    margin-bottom: 30px;
+    box-shadow: none;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+

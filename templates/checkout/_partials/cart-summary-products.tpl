@@ -12,7 +12,7 @@
         {l s='Show details' d='Shop.Theme.Actions'}
       </span>
 
-      <i class="material-icons" aria-hidden="true">expand_more</i>
+      {include file="_svg/caret-down-fill.svg"}
     </a>
   </p>
 

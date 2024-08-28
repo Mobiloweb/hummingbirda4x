@@ -184,6 +184,8 @@ const selectorsMap = {
   desktopMenu,
   formValidation,
   passwordPolicy,
+
+  productImageZoomInOpener: '.product__images__modal-opener'
 };
 
 export default selectorsMap;

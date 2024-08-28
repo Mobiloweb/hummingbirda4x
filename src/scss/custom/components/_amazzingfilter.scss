@@ -1,0 +1,42 @@
+#amazzing_filter {
+  .title_block {
+    text-transform: uppercase;
+  }
+
+  .clearAll {
+    background: inherit;
+  }
+
+  .cf {
+    background: #eceff05c;
+  }
+
+  & .compact-toggle {
+    background: $primary;
+    color: white;
+  }
+}
+
+#af_form {
+  & .af_subtitle {
+    color: #555;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+  }
+
+  & .af_filter_content ul li {
+    margin: 8px 0;
+  }
+
+  & .child-categories li {
+    padding-right: 0;
+  }
+
+  & .child-categories .count {
+    font-size: 0.825rem;
+  }
+
+  span.name {
+    font-size: 0.825rem;
+  }
+}

@@ -29,9 +29,11 @@
 
     <main id="wrapper" class="wrapper">
       {hook h='displayWrapperTop'}
-      
-      {block name='breadcrumb'}
-        {include file='_partials/breadcrumb.tpl'}
+
+      {block name='top_page_title'}
+        {block name='breadcrumb'}
+          {include file='_partials/breadcrumb.tpl'}
+        {/block}
       {/block}
 
       {block name='notifications'}

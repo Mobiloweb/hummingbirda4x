@@ -2,4 +2,23 @@ $component-name: breadcrumb;
 
 .#{$component-name} {
   margin: 0;
+
+  &-item {
+    margin: 4px;
+
+    &::before {
+      opacity: 0.8;
+    }
+
+    span {
+      opacity: 0.8;
+    }
+
+    &:nth-last-child(2) {
+      span {
+        opacity: 1;
+        font-weight: bold;
+      }
+    }
+  }
 }

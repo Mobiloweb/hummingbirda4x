@@ -1,14 +1,14 @@
 @import "header-banner";
 @import "nav-menu";
-@import "advanced-search";
 @import "home-banner-section";
 @import "home-carousel";
 @import "slider";
 @import "currency-selector";
+@import "page-title-section";
 @import "language-selector";
 @import "section-title";
 @import "breadcrumb";
-@import "category-tree";
+//@import "category-tree";
 @import "search-filters";
 @import "category";
 @import "customer";
@@ -23,3 +23,5 @@
 @import "search-filters-modules";
 @import "mailalerts-account";
 @import "misc";
+@import "amazzingfilter";
+@import "buttons";

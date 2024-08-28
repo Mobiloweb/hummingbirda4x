@@ -1,0 +1,20 @@
+.zoomable {
+  $parentSelector: &;
+
+  position: relative;
+  overflow: hidden;
+  box-shadow: 4px 4px 8px rgba(#000, 0.2);
+
+  &__img {
+    transform-origin: var(--zoom-pos-x, 0%) var(--zoom-pos-y, 0%);
+    transition: transform 0.15s linear;
+  }
+
+  &--zoomed {
+    #{$parentSelector}__img {
+      cursor: zoom-in;
+      transform: scale(var(--zoom, 2));
+    }
+  }
+}
+

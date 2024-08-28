@@ -4,7 +4,7 @@
   {include file="javascripts/`$page.page_name`.tpl"}
 {else}
   {foreach $javascript.external as $js}
-    <script type="text/javascript" src="{$js.uri}" {$js.attribute} defer></script>
+    <script type="text/javascript" src="{$js.uri}" {$js.attribute}></script>
   {/foreach}
 
   {foreach $javascript.inline as $js}

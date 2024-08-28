@@ -28,9 +28,13 @@
   {include file='_partials/microdata/product-jsonld.tpl'}
 {/block}
 
+{block name="header" append}
+  {widget name="pm_advancedsearch4" id_search_engine="2"}
+{/block}
+
 {block name='content'}
   {* FIRST PART - PHOTO, NAME, PRICES, ADD TO CART*}
-  <div class="row g-4 g-xl-5 product js-product-container">
+  <div class="row g-4 g-xl-5 product js-product-container mt-4">
     <div class="product__left col-lg-6 col-xl-7">
       {block name='product_cover_thumbnails'}
         {include file='catalog/_partials/product-cover-thumbnails.tpl'}
@@ -39,16 +43,33 @@
 
     <div class="product__col col-lg-6 col-xl-5">
       {block name='product_header'}
-        <h1 class="h4 product__name">{block name='page_title'}{$product.name}{/block}</h1>
+        <h1 class="h4 product__name page-title-section fs-2 fw-bold">{block name='page_title'}{$product.name}{/block}</h1>
       {/block}
+
+      {widget name="ps_sharebuttons"}
+
+      {if !empty($product.reference_to_display)}
+        <p class="detail__title fw-bold text-uppercase mt-3">{l s='Reference' d='Shop.Theme.Catalog'} : <span class="fw-normal text-secondary">{$product.reference_to_display}</span></p>
+      {/if}
+
+      <hr>
 
       {block name='product_prices'}
         {include file='catalog/_partials/product-prices.tpl'}
       {/block}
 
       {block name='product_description_short'}
-        <div class="product__description-short rich-text">{$product.description_short nofilter}</div>
+        <div class="product__description-short rich-text">{$product.description_short|regex_replace:'/(\sstyle="[^"]*")/i':'' nofilter}</div>
       {/block}
+
+      {assign var="delivery_delay_text" value=$totcustomfields_display_delais_de_livraison|preg_replace:'/<!--.*?-->/s':''}
+
+      {if $delivery_delay_text}
+        <h3>Délais de livraison</h3>
+        {$delivery_delay_text nofilter}
+      {/if}
+
+      <hr class="my-5">
 
       {block name='product_customization'}
         {if $product.is_customizable && count($product.customizations.fields)}
@@ -56,12 +77,18 @@
         {/if}
       {/block}
 
-      <div class="product__actions js-product-actions">
+      {block name='product_additional_info'}
+        {include file='catalog/_partials/product-additional-info.tpl'}
+      {/block}
+
+      <div class="product__actions js-product-actions mt-5">
         {block name='product_buy'}
           <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
             <input type="hidden" name="token" value="{$static_token}">
             <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
             <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id" class="js-product-customization-id">
+
+            {hook h='displayProductPriceBlock' product=$product type="weight" hook_origin='product_sheet'}
 
             {block name='product_variants'}
               {include file='catalog/_partials/product-variants.tpl'}
@@ -79,10 +106,6 @@
 
             {block name='product_add_to_cart'}
               {include file='catalog/_partials/product-add-to-cart.tpl'}
-            {/block}
-
-            {block name='product_additional_info'}
-              {include file='catalog/_partials/product-additional-info.tpl'}
             {/block}
 
             {block name='product_out_of_stock'}
@@ -106,76 +129,76 @@
       {/block}
     </div>
 
-    <div class="col-lg-6 col-xl-7">
-      {block name='product_tabs'}
-          <div class="product__infos accordion accordion-flush" id="product-infos-accordion">
+{*    <div class="col-lg-6 col-xl-7">*}
+{*      {block name='product_tabs'}*}
+{*          <div class="product__infos accordion accordion-flush" id="product-infos-accordion">*}
 
-            {block name='product_description'}
-              {if $product.description}
-                <div class="info accordion-item" id="description">
-                  <h2 class="info__title accordion-header" id="product-description-heading">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#product-description-collapse" aria-expanded="true" aria-controls="product-description-collapse">
-                      {l s='Description' d='Shop.Theme.Catalog'}
-                    </button>
-                  </h2>
-                  <div id="product-description-collapse" class="info__content accordion-collapse collapse show" data-bs-parent="#product-infos-accordion" aria-labelledby="product-description-heading">
-                    <div class="product__description accordion-body rich-text">
-                      {$product.description nofilter}
-                    </div>
-                  </div>
-                </div>
-              {/if}
-            {/block}
+{*            {block name='product_description'}*}
+{*              {if $product.description}*}
+{*                <div class="info accordion-item" id="description">*}
+{*                  <h2 class="info__title accordion-header" id="product-description-heading">*}
+{*                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#product-description-collapse" aria-expanded="true" aria-controls="product-description-collapse">*}
+{*                      {l s='Description' d='Shop.Theme.Catalog'}*}
+{*                    </button>*}
+{*                  </h2>*}
+{*                  <div id="product-description-collapse" class="info__content accordion-collapse collapse show" data-bs-parent="#product-infos-accordion" aria-labelledby="product-description-heading">*}
+{*                    <div class="product__description accordion-body rich-text">*}
+{*                      {$product.description nofilter}*}
+{*                    </div>*}
+{*                  </div>*}
+{*                </div>*}
+{*              {/if}*}
+{*            {/block}*}
 
-            {block name='product_details'}
-              {include file='catalog/_partials/product-details.tpl'}
-            {/block}
+{*            {block name='product_details'}*}
+{*              {include file='catalog/_partials/product-details.tpl'}*}
+{*            {/block}*}
 
-            {block name='product_attachments'}
-              {if $product.attachments}
-                <div class="info accordion-item" id="attachments">
-                  <h2 class="info__title accordion-header" id="product-attachments-heading">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#product-attachments-collapse" aria-expanded="true" aria-controls="product-attachments-collapse">
-                      {l s='Download' d='Shop.Theme.Actions'}
-                    </button>
-                  </h2>
-                  <div id="product-attachments-collapse" class="info__content accordion-collapse collapse" data-bs-parent="#product-infos-accordion" aria-labelledby="product-attachments-heading">
-                    <div class="product__attachments accordion-body">
-                      {foreach from=$product.attachments item=attachment}
-                        <div class="attachment">
-                          <p class="h5"><a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a></p>
-                          <p>{$attachment.description}</p>
-                          <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">
-                            {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})
-                          </a>
-                        </div>
-                      {/foreach}
-                    </div>
-                  </div>
-                </div>
-              {/if}
-            {/block}
+{*            {block name='product_attachments'}*}
+{*              {if $product.attachments}*}
+{*                <div class="info accordion-item" id="attachments">*}
+{*                  <h2 class="info__title accordion-header" id="product-attachments-heading">*}
+{*                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#product-attachments-collapse" aria-expanded="true" aria-controls="product-attachments-collapse">*}
+{*                      {l s='Download' d='Shop.Theme.Actions'}*}
+{*                    </button>*}
+{*                  </h2>*}
+{*                  <div id="product-attachments-collapse" class="info__content accordion-collapse collapse" data-bs-parent="#product-infos-accordion" aria-labelledby="product-attachments-heading">*}
+{*                    <div class="product__attachments accordion-body">*}
+{*                      {foreach from=$product.attachments item=attachment}*}
+{*                        <div class="attachment">*}
+{*                          <p class="h5"><a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">{$attachment.name}</a></p>*}
+{*                          <p>{$attachment.description}</p>*}
+{*                          <a href="{url entity='attachment' params=['id_attachment' => $attachment.id_attachment]}">*}
+{*                            {l s='Download' d='Shop.Theme.Actions'} ({$attachment.file_size_formatted})*}
+{*                          </a>*}
+{*                        </div>*}
+{*                      {/foreach}*}
+{*                    </div>*}
+{*                  </div>*}
+{*                </div>*}
+{*              {/if}*}
+{*            {/block}*}
 
-            {* New collapses for module hooked content *}
-            {foreach from=$product.extraContent item=extra key=extraKey}
-              <div class="info accordion-item" id="extra-{$extraKey}" {foreach $extra.attr as $key => $val} {$key}="{$val}"{/foreach}>
-                <h2 class="info__title accordion-header" id="product-extra{$extraKey}-heading">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#product-extra{$extraKey}-collapse" aria-expanded="true" aria-controls="product-extra{$extraKey}-collapse">
-                    {$extra.title}
-                  </button>
-                </h2>
-                <div id="product-extra{$extraKey}-collapse" class="info__content accordion-collapse collapse" data-bs-parent="#product-infos-accordion" aria-labelledby="product-extra{$extraKey}-heading">
-                  <div class="accordion-body">
-                    {$extra.content nofilter}
-                  </div>
-                </div>
-              </div>
-            {/foreach}
+{*            *}{* New collapses for module hooked content *}
+{*            {foreach from=$product.extraContent item=extra key=extraKey}*}
+{*              <div class="info accordion-item" id="extra-{$extraKey}" {foreach $extra.attr as $key => $val} {$key}="{$val}"{/foreach}>*}
+{*                <h2 class="info__title accordion-header" id="product-extra{$extraKey}-heading">*}
+{*                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#product-extra{$extraKey}-collapse" aria-expanded="true" aria-controls="product-extra{$extraKey}-collapse">*}
+{*                    {$extra.title}*}
+{*                  </button>*}
+{*                </h2>*}
+{*                <div id="product-extra{$extraKey}-collapse" class="info__content accordion-collapse collapse" data-bs-parent="#product-infos-accordion" aria-labelledby="product-extra{$extraKey}-heading">*}
+{*                  <div class="accordion-body">*}
+{*                    {$extra.content nofilter}*}
+{*                  </div>*}
+{*                </div>*}
+{*              </div>*}
+{*            {/foreach}*}
 
-          </div>
-      {/block}
-    </div>{* /col *}
-  </div>{* /row *}
+{*          </div>*}
+{*      {/block}*}
+{*    </div>*}{* /col *}
+{*  </div>*}{* /row *}
   {* END OF SECOND PART *}
 
   {block name='product_accessories'}
@@ -188,9 +211,9 @@
     {hook h='displayFooterProduct' product=$product category=$category}
   {/block}
 
-  {block name='product_images_modal'}
-    {include file='catalog/_partials/product-images-modal.tpl'}
-  {/block}
+{*  {block name='product_images_modal'}*}
+{*    {include file='catalog/_partials/product-images-modal.tpl'}*}
+{*  {/block}*}
 
   {block name='page_footer_container'}
     {block name='page_footer'}

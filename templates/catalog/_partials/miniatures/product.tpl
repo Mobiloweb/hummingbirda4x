@@ -57,7 +57,9 @@
                   alt="{$product.cover.legend}"
                   title="{$product.cover.legend}"
                   data-full-size-image-url="{$product.cover.bySize.home_default.url}"
+                  onerror="this.parentNode.querySelector('source').remove();this.removeAttribute('srcset');this.removeAttribute('sizes');this.src='{$urls.img_url}no-image.webp';this.onerror=null"
                 >
+
               </picture>
             {else}
               <picture>
@@ -106,7 +108,7 @@
 
             {block name='quick_view_touch'}
               <button class="{$componentName}__quickview_touch btn js-quickview" data-link-action="quickview">
-                <img src="{$urls.img_url}/svg/zoom-in.svg" alt="Aperçu rapide">
+                {include file="_svg/zoom-in.svg"}
               </button>
             {/block}
           </div>
@@ -126,7 +128,7 @@
 
           <div class="{$componentName}__infos__top">
             {block name='product_name'}
-              <a href="{$product.url}"><p class="{$componentName}__title text-dark">{$product.name}</p></a>
+              <a href="{$product.url}"><p class="{$componentName}__title fw-bold text-dark">{$product.name}</p></a>
             {/block}
           </div>
 

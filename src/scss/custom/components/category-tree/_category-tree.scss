@@ -2,7 +2,7 @@ $component-name: category-tree;
 
 #left-column {
   --#{$component-name}-title-color: #{$gray-800};
-  --#{$component-name}-title-size: 1.5rem;
+  --#{$component-name}-title-size: 1.4rem;
   --#{$component-name}-title-spacing: 1rem;
   --#{$component-name}-subtitle-color: #{$gray-800};
   --#{$component-name}-subtitle-size: 1rem;
@@ -11,9 +11,15 @@ $component-name: category-tree;
 }
 
 .#{$component-name} {
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
   border-bottom: var(--#{$component-name}-border-bottom);
+
+  background-color: #fff;
+  box-shadow: 2px 2px 11px 0 rgba(0, 0, 0, 0.1);
+  clear: left;
+  float: left;
+  margin-bottom: 30px;
+  padding: 15px 25px 30px;
+  width: 100%;
 
   &__child {
     padding: 0;
@@ -21,6 +27,7 @@ $component-name: category-tree;
   }
 
   &__title {
+    text-transform: uppercase;
     padding: 0;
     margin-bottom: var(--#{$component-name}-title-spacing);
     font-size: var(--#{$component-name}-title-size);
@@ -35,19 +42,22 @@ $component-name: category-tree;
   }
 
   &__item {
+    border-bottom: 1px solid #D0D5DB;
+
     &__link {
       display: block;
-      padding: var(--#{$component-name}-subtitle-spacing) 0;
-      font-size: var(--#{$component-name}-subtitle-size);
-      font-weight: 600;
-      color: var(--#{$component-name}-subtitle-color);
+      font-weight: bold;
+      padding: 18px 0;
+      color: #555;
+      font-size: .875rem;
+      text-transform: uppercase;
     }
 
     &__header {
       &--parent {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        //display: flex;
+        //align-items: center;
+        //justify-content: space-between;
 
         > div {
           padding: 0;

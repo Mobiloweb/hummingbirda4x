@@ -25,13 +25,13 @@
                 <li class="page-item{if $page.current} active{/if}" {if $page.current}aria-current="page" {/if}>
                   <a rel="{if $page.type === 'previous'}prev{elseif $page.type === 'next'}next{else}nofollow{/if}"
                     href="{$page.url}"
-                    class="page-link btn-with-icon {if $page.type === 'previous'}previous {elseif $page.type === 'next'}next {/if}{['disabled' => !$page.clickable, 'js-pager-link' => true]|classnames}">
+                    class="page-link btn-with-icon h-100 {if $page.type === 'previous'}previous {elseif $page.type === 'next'}next {/if}{['disabled' => !$page.clickable, 'js-pager-link' => true]|classnames}">
                     {if $page.type === 'previous'}
-                      <i class="material-icons rtl-flip" aria-hidden="true">&#xE314;</i>
+                      {include file='_svg/chevron-left.svg'}
                       <span class="d-none d-md-flex">{l s='Previous' d='Shop.Theme.Actions'}</span>
                     {elseif $page.type === 'next'}
                       <span class="d-none d-md-flex">{l s='Next' d='Shop.Theme.Actions'}</span>
-                      <i class="material-icons rtl-flip" aria-hidden="true">&#xE315;</i>
+                      {include file='_svg/chevron-right.svg'}
                     {else}
                       {$page.page}
                     {/if}
