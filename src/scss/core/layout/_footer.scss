@@ -4,7 +4,7 @@ $component-name: footer;
   &__main &__main-container {
     padding-right: 0;
     padding-left: 0;
-    border-bottom: 1px solid #696969;
+    border-bottom: 1px solid $separator;
     padding-bottom: 3rem;
 
     @include media-breakpoint-up(lg) {
@@ -35,7 +35,7 @@ $component-name: footer;
     border-right: none;
 
     @include media-breakpoint-up(lg) {
-      border-right: 1px solid #696969;
+      border-right: 1px solid $separator;
       padding-right: 1rem;
     }
 
@@ -49,7 +49,7 @@ $component-name: footer;
   }
 
   &__main &__support-text {
-    border-bottom: 1px solid #696969;
+    border-bottom: 1px solid $separator;
     padding-bottom: 3rem;
   }
 
