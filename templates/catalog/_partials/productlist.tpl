@@ -3,7 +3,7 @@
  * file that was distributed with this source code.
  *}
 
-{capture assign="productClasses"}{if !empty($productClass)}{$productClass}{else}col-12 col-sm-6 col-xl-4{/if}{/capture}
+{capture assign="productClasses"}{if !empty($productClass)}{$productClass}{else}col-12 col-sm-6 col-lg-4 col-xl-3{/if}{/capture}
 
 <div class="products{if !empty($cssClass)} {$cssClass}{else} row{/if}">
   {foreach from=$products item='product' key='position'}

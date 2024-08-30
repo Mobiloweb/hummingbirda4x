@@ -97,6 +97,7 @@
   li {
     margin-bottom: 13px;
     text-transform: uppercase;
+
     & > .checkbox, & > .radio {
       display: flex;
       align-items: flex-start;
@@ -107,5 +108,27 @@
 
 #left-column .PM_ASBlockOutputVertical {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#flush-heading-6 {
+  button {
+    &::after {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='#fff' stroke='%23363a41' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
+    }
+  }
+}
+
+#flush-as5-6 {
+  @include media-breakpoint-up(md) {
+    display: block;
+    height: auto;
+    visibility: visible;
+  }
+}
+
+#flush-heading-6 {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
 }
 
