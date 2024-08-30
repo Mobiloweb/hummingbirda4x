@@ -9,7 +9,7 @@
 {/if}
 
 {* Full width layout if we are on the last category depth*}
-{if $category['level_depth'] == Category::getLastPosition($category['id_parent'], $category['id_shop_default'])}
+{if Category::getLastPosition($category['id'], $category['id_shop_default']) == 1}
   {$layout = 'layouts/layout-full-width.tpl'}
 {/if}
 
