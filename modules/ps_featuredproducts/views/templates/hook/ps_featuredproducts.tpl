@@ -9,9 +9,9 @@
   </div>
 
   <div class="featured-products-footer text-center">
-    <a class="all-product-link btn btn-outline-primary btn-with-icon" href="{$allProductsLink}">
+    <a class="all-product-link btn btn-outline-primary btn-with-icon btn-lg fill-primary" href="{$allProductsLink}">
       {l s='All products' d='Shop.Theme.Catalog'}
-      <i class="material-icons rtl-flip" aria-hidden="true">&#xE315;</i>
+      {include file='_svg/arrow-right.svg'}
     </a>
   </div>
 </section>
