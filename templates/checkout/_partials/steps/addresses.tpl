@@ -50,7 +50,7 @@
         {/if}
 
         <a href="{$new_address_delivery_url}" class="btn btn-outline-primary btn-with-icon w-100 w-md-auto mb-3">
-          <i class="material-icons" aria-hidden="true">&#xE145;</i>
+          {include file='_svg/plus.svg'}
           {l s='Add new address' d='Shop.Theme.Actions'}
         </a>
 
@@ -91,7 +91,7 @@
           {/if}
 
           <a href="{$new_address_invoice_url}" class="btn btn-outline-primary btn-with-icon w-100 w-md-auto">
-            <i class="material-icons" aria-hidden="true">&#xE145;</i>
+            {include file='_svg/plus.svg'}
             {l s='Add new address' d='Shop.Theme.Actions'}
           </a>
         {/if}
@@ -100,14 +100,13 @@
 
       <div class="mt-4 d-flex flex-wrap justify-content-between">
         <button class="btn btn-outline-primary btn-with-icon w-100 w-md-auto mb-3 mb-md-0 js-back" data-step="checkout-personal-information-step">
-          <i class="material-icons rtl-flip" aria-hidden="true">arrow_backward</i>
+          {include file='_svg/chevron-left.svg'}
           {l s='Back to Personal Information' d='Shop.Theme.Actions'}
         </button>
 
         {if !$form_has_continue_button}
-            <button type="submit" class="btn btn-primary btn-with-icon w-100 w-md-auto continue" name="confirm-addresses" value="1">
+            <button type="submit" class="btn btn-lg btn-primary btn-with-icon w-100 w-md-auto continue" name="confirm-addresses" value="1">
               {l s='Continue to Shipping' d='Shop.Theme.Actions'}
-              <div class="material-icons rtl-flip" aria-hidden="true">arrow_forward</div>
             </button>
 
             <input type="hidden" id="not-valid-addresses" class="js-not-valid-addresses" value="{$not_valid_addresses}">

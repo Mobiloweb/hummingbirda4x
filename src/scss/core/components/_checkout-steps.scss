@@ -67,25 +67,25 @@ $component-name: checkout__steps;
     }
 
     &::before {
-      background: var(--bs-success);
+      background: var(--bs-primary);
     }
   }
 
   &--success {
     .#{$component-name}__number {
-      background: var(--bs-success);
+      background: var(--bs-primary);
     }
 
     .#{$component-name}__text {
-      color: var(--bs-success);
+      color: var(--bs-primary);
     }
 
     &::before {
-      background: var(--bs-success);
+      background: var(--bs-primary);
     }
 
     &::after {
-      background: var(--bs-success);
+      background: var(--bs-primary);
     }
   }
 
@@ -101,7 +101,7 @@ $component-name: checkout__steps;
 
   /* Do not assign any styles to active tab */
   .nav-tabs .checkout__steps--success .nav-link.active {
-    color: var(--bs-success);
+    color: var(--bs-primary);
   }
 
   .nav-tabs .checkout__steps--current .nav-link.active {

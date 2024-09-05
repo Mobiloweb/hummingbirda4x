@@ -30,8 +30,8 @@
               id="{$option.id}"
               {if ($selected_payment_option == $option.id || $is_free) || ($payment_options|@count === 1 && $module_options|@count === 1)} checked {/if}
             />
-            
-            <span class="d-flex flex-wrap gap-1 align-items-center flex-grow-1">	
+
+            <span class="d-flex flex-wrap gap-1 align-items-center flex-grow-1">
               {if $option.logo}
                 <img class="flex-shrink-0 me-2" src="{$option.logo}" loading="lazy">
               {/if}
@@ -131,7 +131,7 @@
 
   <div class="payment__actions d-block d-md-flex d-flex flex-wrap justify-content-between">
     <button class="btn btn-outline-primary btn-with-icon w-100 w-md-auto mb-3 mb-md-0 js-back" data-step="checkout-delivery-step">
-      <div class="material-icons rtl-flip" aria-hidden="true">arrow_backward</div>
+      {include file="_svg/chevron-left.svg"}
       {l s='Back to Shipping method' d='Shop.Theme.Actions'}
     </button>
 
@@ -140,7 +140,6 @@
         <div class="payment__actions">
           <button type="submit" class="btn btn-primary btn-with-icon w-100{if !$selected_payment_option} disabled{/if}">
             {l s='Place order' d='Shop.Theme.Checkout'}
-            <div class="material-icons rtl-flip" aria-hidden="true">arrow_forward</div>
           </button>
         </div>
       </div>

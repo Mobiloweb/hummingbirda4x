@@ -4,7 +4,7 @@
  *}
 {block name='address_selector_blocks'}
   {foreach $addresses as $address}
-    <div class="col-12 col-sm-6 mb-2">
+    <div class="col-12 my-2">
       <article id="{$name|classname}-address-{$address.id}" class="address card js-address-item{if $address.id == $selected} selected{/if}" data-id-address="{$address.id}">
         <div class="card-body">
           <label class="form-check-label row">
@@ -46,7 +46,7 @@
               {/block}
             </div>
           </label>
-        </div> 
+        </div>
       </article>
     </div>
   {/foreach}

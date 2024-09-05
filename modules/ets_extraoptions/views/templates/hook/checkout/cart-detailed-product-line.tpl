@@ -213,8 +213,6 @@
 
   </div>
 
-  <div class="col-4 col-sm-2"></div>
-
   <div class="product-line__actions col-8 col-sm-10">
     {if empty($product.is_gift)}
       <a class="remove-from-cart" rel="nofollow" href="{$product.remove_from_cart_url}"
