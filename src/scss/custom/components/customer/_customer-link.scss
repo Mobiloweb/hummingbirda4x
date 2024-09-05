@@ -1,6 +1,10 @@
 $component-name: customer-link;
 
 .#{$component-name} {
+  & p {
+    transition: 0.25s ease-in-out;
+  }
+
   &__link,
   a {
     display: block;
@@ -12,16 +16,11 @@ $component-name: customer-link;
       font-size: 1rem;
       font-weight: 600;
       color: var(--bs-gray-800);
-      background: var(--bs-gray-100);
       border-radius: var(--bs-border-radius-sm);
-      transition: 0.25s ease-out;
 
       &:hover {
-        color: var(--bs-white);
-        background: var(--bs-primary);
-
-        i {
-          color: var(--bs-white);
+        i, p {
+          color: var(--bs-primary);
         }
       }
 
@@ -35,7 +34,6 @@ $component-name: customer-link;
         margin-bottom: 0.75rem;
         font-size: 2rem;
         color: var(--bs-gray-700);
-        transition: 0.25s ease-out;
 
         @include media-breakpoint-down(md) {
           margin-right: 0.75rem;
