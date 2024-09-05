@@ -21,7 +21,7 @@
 <div class="input-group flex-nowrap h-100">
   <button role="button" aria-label="{$prepend.button}" class="btn {$prepend.button} js-{$prepend.button}-button" type="button">
     {include file="_svg/dash.svg"}
-    <div class="spinner-border spinner-border-sm align-middle d-none" role="status"></div>
+{*    <div class="spinner-border spinner-border-sm align-middle d-none" role="status"></div>*}
   </button>
 
   <input
@@ -42,6 +42,6 @@
 
   <button role="button" aria-label="{$append.button}" class="btn {$append.button} js-{$append.button}-button" type="button">
     {include file="_svg/plus.svg"}
-    <div class="spinner-border spinner-border-sm align-middle d-none" role="status"></div>
+{*    <div class="spinner-border spinner-border-sm align-middle d-none" role="status"></div>*}
   </button>
 </div>
