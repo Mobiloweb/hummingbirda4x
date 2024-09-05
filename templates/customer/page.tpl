@@ -6,16 +6,17 @@
 {extends file=$layout}
 
 {block name='content'}
-  <div class="row">
+  {* <div class="row">
     <div class="col-md-4 col-lg-3">
       {include file='components/account-menu.tpl'}
-    </div>
+    </div> *}
 
-    <div class="col-md-8 col-lg-9">
+    {* <div class="col-md-8 col-lg-9"> *}
+    <div>
       {block name='page_header_container'}
         {block name='page_title'}
-          <div class="page-header">
-            <h1 class="h4">{$smarty.block.child}</h1>
+          <div class="page-header mt-3">
+            <h1 class="h2">{$smarty.block.child}</h1>
           </div>
         {/block}
 
@@ -43,5 +44,5 @@
           {/block}
       {/block}
     </div>
-  </div>
+  {* </div> *}
 {/block}

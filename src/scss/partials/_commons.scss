@@ -32,6 +32,16 @@ a:not(.alert-link) {
   }
 }
 
+h1:not(.dyn-title)::before {
+  content: "";
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-bottom: 30px solid var(--bs-primary);
+  border-left: 65px solid transparent;
+  margin-right: 12px;
+}
+
 label .color,
 .variant-links .color,
 .custom-checkbox input[type="checkbox"] + span.color {
