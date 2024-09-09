@@ -19,7 +19,11 @@ const initVisiblePassword = () => {
       const icon = button.firstElementChild;
 
       if (icon) {
-        icon.innerHTML = newType === 'text' ? 'visibility_off' : 'visibility';
+
+       icon.parentNode?.querySelector('.visible-password')?.classList.toggle('d-none');
+       icon.parentNode?.querySelector('.invisible-password')?.classList.toggle('d-none');
+
+        // icon.innerHTML = newType === 'text' ? 'visibility_off' : 'visibility';
 
         const {textHide, textShow} = button.dataset;
 

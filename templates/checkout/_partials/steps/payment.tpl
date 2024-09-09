@@ -90,7 +90,7 @@
       {l s='By confirming the order, you certify that you have read and agree with all of the conditions below:' d='Shop.Theme.Checkout'}
     </p>
 
-    <form id="conditions-to-approve" class="js-conditions-to-approve" method="GET">
+    <form id="conditions-to-approve" class="js-conditions-to-approve mt-5 mb-2" method="GET">
         {foreach from=$conditions_to_approve item="condition" key="condition_name"}
           <div class="my-3 form-check">
             <label class="js-terms form-check-label" for="conditions_to_approve[{$condition_name}]">

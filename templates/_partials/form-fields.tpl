@@ -142,7 +142,7 @@
           >
 
           <button
-            class="btn btn-primary"
+            class="btn btn-primary fill-light"
             type="button"
             data-action="show-password"
             data-text-show="{l s='Show Password' d='Shop.Theme.Actions'}"
@@ -150,7 +150,8 @@
             aria-label="{l s='Show Password' d='Shop.Theme.Actions'}"
             aria-expanded="false"
           >
-            <i class="material-icons">visibility</i>
+            <span class="visible-password">{include file="_svg/visibility.svg"}</span>
+            <span class="invisible-password d-none">{include file="_svg/visibility-off.svg"}</span>
           </button>
         </div>
       {/block}
