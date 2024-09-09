@@ -23,4 +23,14 @@
       color: #fff!important;
     }
   }
+
+  &-white {
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+
+    &:hover {
+      background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity));
+    }
+  }
 }
