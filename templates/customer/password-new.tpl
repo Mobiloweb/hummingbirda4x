@@ -43,7 +43,7 @@
             aria-label="{l s='Show Password' d='Shop.Theme.Actions'}"
             aria-expanded="false"
           >
-            <i class="material-icons">visibility</i>
+            {include file="_svg/visibility.svg"}
           </button>
         </div>
       </div>
@@ -60,7 +60,7 @@
             aria-label="{l s='Show Password' d='Shop.Theme.Actions'}"
             aria-expanded="false"
           >
-            <i class="material-icons">visibility</i>
+            {include file="_svg/visibility.svg"}
           </button>
         </div>
       </div>

@@ -113,3 +113,18 @@ $component-name: checkout__steps;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
 }
+
+.delivery-options__item {
+  .carrier__logo img {
+    max-height: 50px;
+  }
+
+  .custom-radio, .carrier__logo {
+    width: fit-content;
+  }
+}
+
+.payment__list img {
+  max-height: 24px;
+  height: 24px;
+}

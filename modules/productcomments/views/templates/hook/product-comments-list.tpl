@@ -30,7 +30,7 @@
     {if $list_total_pages > 0}
       <ul>
         {assign var = "prevCount" value = 0}
-        <li id="pcl_page_{$prevCount}"><span class="prev"><i class="material-icons">chevron_left</i></span></li>
+        <li id="pcl_page_{$prevCount}"><span class="prev">{include file="_svg/chevron-left.svg"}</span></li>
         {for $pageCount = 1 to $list_total_pages}
           <li id="pcl_page_{$pageCount}"><span>{$pageCount}</span></li>
         {/for}
