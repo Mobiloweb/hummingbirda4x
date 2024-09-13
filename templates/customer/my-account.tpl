@@ -74,6 +74,13 @@
     {block name='display_customer_account'}
       {hook h='displayCustomerAccount'}
     {/block}
+
+    <a class="{$componentName}__link col-md-6 col-lg-4 text-md-center text-left" id="author-blog-comment-link" href="{$link->getModuleLink('ets_blog','comments')|escape:'html':'UTF-8'}">
+      <span class="link-item p-5 shadow">
+        <i class="material-icons fa fa-comments" aria-hidden="true"></i>
+        <p class="text-uppercase mb-0">{l s='Mes commentaires de blog' mod='ets_blog'}</p>
+      </span>
+    </a>
   </div>
 {/block}
 
