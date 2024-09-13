@@ -12,7 +12,7 @@
 
 <div class="{$headerCustomBannerName} d-flex justify-content-end px-2 align-items-center py-xl-2">
   {if $page.page_name === 'index'}
-    <h1 class="{$headerCustomBannerName}__title w-50 mb-0 d-none d-xl-inline ms-0 me-auto">
+    <h1 class="{$headerCustomBannerName}__title w-50 mb-0 d-none d-xl-inline ms-0 me-auto dyn-title">
       ACCESSAUTO4X4, LE SPÉCIALISTE DE LA VENTE EN LIGNE D'ACCESSOIRES AUTO, 4X4, PICK-UP ET VÉHICULES UTILITAIRES
     </h1>
   {else}
