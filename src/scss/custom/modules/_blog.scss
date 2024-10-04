@@ -1,93 +1,95 @@
-.ets-blog-wrapper-form-managament{
-  float:none!important
-}
-a:hover{
-  color:$primary!important
-}
-.read_more{
-  font-weight:700!important
-}
-.blog_view_all_button{
-  text-align:left!important;
-  padding:0!important;
-  @media(min-width:992px){
-      margin:0!important
-  }
-  .view_all_link{
-      background-color:transparent!important;
-      padding:0!important;
-      color:gray!important;
-      border-bottom:1px dotted!important;
-      font-style:italic!important;
-      font-weight:700!important;
-      text-align:left!important;
-      margin:015px!important;
-      @media(min-width:768px){
-          margin:0!important
-      }
-      &:hover{
-          color:$primary!important
-      }
-  }
-  .blog_view_all{
-      display:none!important
-  }
-}
-#left-column{
-  margin:0!important;
-  padding:0!important;
-  display:flex!important;
-  gap:20px!important;
-  flex-direction:column!important;
-  .block_content{
-      @media(min-width:992px){
-          margin:0!important
-      }
-  }
-  .ets_blog_sidebar{
-      width:100%!important;
-      @media(min-width:992px){
-          width:25%!important
-      }
-  }
-  #content-wrapper{
-      width:100%!important;
-      @media(min-width:992px){
-          width:75%!important
-      }
-      .ets_blog_layout_list{
-          padding:0!important
-      }
-  }
-  @media(min-width:992px){
-      flex-direction:row!important
-  }
-}
-.blog-title{
-  margin-bottom:20px!important
-}
-.ets-blog-list{
-  display:flex!important;
-  flex-direction:column!important;
-  gap:50px!important;
-  li{
-      padding:00015px!important;
-      margin:0!important;
-      display:flex!important;
-      .ets_item_img{
-          width:100%!important;
-          @media(min-width:768px){
-              width:30%!important
-          }
-      }
-      .ets-blog-wrapper-content{
-          width:100%!important;
-          @media(min-width:768px){
-              width:70%!important
-          }
-      }
-  }
-}
-.blog_description p{
-  font-size:18px!important
+#ets_blog_page>#wrapper{
+    .ets-blog-wrapper-form-managament{
+        float:none!important
+    }
+    a:hover{
+        color:$primary!important
+    }
+    .read_more{
+        font-weight:700!important
+    }
+    .blog_view_all_button{
+        text-align:left!important;
+        padding:0!important;
+        @media(min-width:992px){
+            margin:0!important
+        }
+        .view_all_link{
+            background-color:transparent!important;
+            padding:0!important;
+            color:gray!important;
+            border-bottom:1px dotted!important;
+            font-style:italic!important;
+            font-weight:700!important;
+            text-align:left!important;
+            margin:015px!important;
+            @media(min-width:768px){
+                margin:0!important
+            }
+            &:hover{
+                color:$primary!important
+            }
+        }
+        .blog_view_all{
+            display:none!important
+        }
+    }
+    #left-column{
+        margin:0!important;
+        padding:0!important;
+        display:flex!important;
+        gap:20px!important;
+        flex-direction:column!important;
+        .block_content{
+            @media(min-width:992px){
+                margin:0!important
+            }
+        }
+        .ets_blog_sidebar{
+            width:100%!important;
+            @media(min-width:992px){
+                width:25%!important
+            }
+        }
+        #content-wrapper{
+            width:100%!important;
+            @media(min-width:992px){
+                width:75%!important
+            }
+            .ets_blog_layout_list{
+                padding:0!important
+            }
+        }
+        @media(min-width:992px){
+            flex-direction:row!important
+        }
+    }
+    .blog-title{
+        margin-bottom:20px!important
+    }
+    .ets-blog-list{
+        display:flex!important;
+        flex-direction:column!important;
+        gap:50px!important;
+        li{
+            padding:00015px!important;
+            margin:0!important;
+            display:flex!important;
+            .ets_item_img{
+                width:100%!important;
+                @media(min-width:768px){
+                    width:30%!important
+                }
+            }
+            .ets-blog-wrapper-content{
+                width:100%!important;
+                @media(min-width:768px){
+                    width:70%!important
+                }
+            }
+        }
+    }
+    .blog_description p{
+        font-size:18px!important
+    }
 }
