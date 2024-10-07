@@ -72,6 +72,7 @@
 
 {block name='javascript_head'}
   {include file='_partials/javascript.tpl' javascript=$javascript.head vars=$js_custom_vars}
+  <script src="https://tarteaucitron.io/load.js?domain=v8.accessauto4x4.com&uuid=109e4fc889f2bc388639d987d1c6f41461b9a38d"></script>
 {/block}
 
 {block name='hook_header'}
