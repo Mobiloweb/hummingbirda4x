@@ -9,7 +9,7 @@
         {block name='page_content_container'}
 
           <section aria-label="Sélection de votre véhicule">
-            <div class="d-flex flex-column flex-xl-row gap-0 mt-2">
+            <div class="d-flex flex-column flex-xl-row gap-0 mt-2 mb-5">
               <div class="order-1 order-xl-0 col-xl-3 col-xxl-4 bg-dark position-relative">
                 <div class="container-fluid h-100">
                   {widget name="pm_advancedsearch4" id_search_engine="2"}
@@ -25,7 +25,6 @@
             {block name='page_content'}
               {block name='hook_home'}
                 
-                {include file='_partials/reassurance.tpl'}
                 {include file='components/home-banner-section.tpl'}
                 {include file='components/home-carousel.tpl'}
 
