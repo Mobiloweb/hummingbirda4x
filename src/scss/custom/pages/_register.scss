@@ -14,3 +14,7 @@
     margin-bottom: 0;
   }
 }
+
+input[name="lpsproaccount_honeypot"], input[name="lpsproaccount_honeypot"] + div {
+  display: none !important;
+}
