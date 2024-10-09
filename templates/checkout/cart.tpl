@@ -24,9 +24,11 @@
         {/block}
 
         <!-- shipping informations -->
+        <div class="my-3">
         {block name='hook_shopping_cart_footer'}
           {hook h='displayShoppingCartFooter'}
         {/block}
+        </div>
       </div>
     </div>
 
