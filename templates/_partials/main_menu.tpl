@@ -3,7 +3,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
 
       <ul class="navbar-nav w-100 align-items-center" id="mainMenu">
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown catalogueMarques">
           <a class="nav-link dropdown-toggle" href="#" id="catalogueMarques" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Catalogue par marques
           </a>
@@ -73,15 +73,15 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/29815-recherche-par-type-d-accessoire">Accessoires</a>
+          <a class="nav-link" href="/29815-recherche-par-type-d-accessoire" aria-label="Page de catalogue d'accessoires" title="Notre catalogue d'accessoires">Accessoires</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/29815-recherche-par-type-d-accessoire">Promotions</a>
+          <a class="nav-link" href="/promotions" aria-label="Notre page regroupant les promotions actuelles" title="Nos produits en promotion">Promotions</a>
         </li>
 
         <li class="nav-item bg-primary ms-auto me-0">
-          <a class="nav-link text-white m-2" href="/29815-recherche-par-type-d-accessoire">Contactez-nous</a>
+          <a class="nav-link text-white m-2" href="/contactez-nous" aria-label="Page de contact" title="Contactez-nous">Contactez-nous</a>
         </li>
       </ul>
     </div>
@@ -186,15 +186,15 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/29815-recherche-par-type-d-accessoire">Accessoires</a>
+        <a class="nav-link" href="/29815-recherche-par-type-d-accessoire" aria-label="Page de catalogue d'accessoires" title="Notre catalogue d'accessoires">Accessoires</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="/29815-recherche-par-type-d-accessoire">Promotions</a>
+        <a class="nav-link" href="/promotions" aria-label="Notre page regroupant les promotions actuelles" title="Nos produits en promotion">Promotions</a>
       </li>
 
       <li class="nav-item bg-primary mt-4">
-        <a class="nav-link btn btn-primary text-white" href="/29815-recherche-par-type-d-accessoire">Contactez-nous</a>
+        <a class="nav-link btn btn-primary text-white" href="/contactez-nous" aria-label="Page de contact" title="Contactez-nous">Contactez-nous</a>
       </li>
     </ul>
   </div>

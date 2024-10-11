@@ -21,3 +21,11 @@ $component-name: header-top;
     }
   }
 }
+
+.catalogueMarques {
+  li {
+    a:hover {
+      color: $primary;
+    }
+  }
+}
