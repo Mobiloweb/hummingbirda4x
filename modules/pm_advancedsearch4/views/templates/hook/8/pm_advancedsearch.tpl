@@ -14,7 +14,7 @@
       </h2>
     {/if}
 
-    <div {if $as_search.id_search === 6 || $as_search.id_search === 13}id="flush-as5-6" class="accordion-collapse collapse mt-4"
+    <div {if $as_search.id_search === 6 || $as_search.id_search === 13}id="flush-as5-6" class="accordion-collapse collapse"
          aria-labelledby="flush-heading-6" data-bs-parent="#accordionFlushAS5-6"{/if}>
       {assign var='next_id_criterion_group_isset' value=false}
       {include file=$as_obj->getTplPath("pm_advancedsearch_header_block.tpl")}
