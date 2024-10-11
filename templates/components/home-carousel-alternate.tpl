@@ -12,7 +12,7 @@
 
       <div class="position-absolute top-0 px-5 d-flex flex-column justify-content-center h-100 text-white">
         <h2 class="fs-6 text-uppercase fw-bold">
-          Accessoires <span class="d-block display-6 fw-bold">EXTÉRIEURS</span>
+          Accessoires <span class="d-block display-6 fw-bold">extérieurs</span>
         </h2>
 
         <ul>
@@ -63,7 +63,7 @@
 
       <div class="position-absolute top-0 px-5 d-flex flex-column justify-content-center h-100 text-white">
         <h2 class="fs-6 text-uppercase fw-bold">
-          <span class="d-block display-6 fw-bold">JANTES</span>
+          <span class="d-block display-6 fw-bold">Jantes</span>
         </h2>
 
         <ul>

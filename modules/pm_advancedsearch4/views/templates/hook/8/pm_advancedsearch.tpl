@@ -6,12 +6,12 @@
   <div class="accordion accordion-flush" id="accordionFlushAS5-6">
 
     {if $as_search.id_search === 6 || $as_search.id_search === 13}
-      <h2 class="accordion-header" id="flush-heading-6">
+      <span class="accordion-header" id="flush-heading-6">
         <button class="accordion-button py-3 px-4 fs-4 border bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-as5-6"
                 aria-expanded="false" aria-controls="flush-as5-6">
           Filtres
         </button>
-      </h2>
+      </span>
     {/if}
 
     <div {if $as_search.id_search === 6 || $as_search.id_search === 13}id="flush-as5-6" class="accordion-collapse collapse"

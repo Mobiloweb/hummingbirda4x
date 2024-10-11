@@ -8,7 +8,7 @@
 
       <div class="position-absolute top-0 px-5 d-flex flex-column justify-content-center h-100 text-white">
         <h2 class="fs-6 text-uppercase fw-bold">
-          Accessoires <span class="d-block display-6 fw-bold">DE COFFRE</span>
+          Accessoires <span class="d-block display-6 fw-bold">de coffre</span>
         </h2>
 
         <ul>
@@ -56,7 +56,7 @@
 
       <div class="position-absolute top-0 px-5 d-flex flex-column justify-content-center h-100 text-white">
         <h2 class="fs-6 text-uppercase fw-bold">
-          Accessoires <span class="d-block display-6 fw-bold">4X4, SUV ET PICK-UP</span>
+          Accessoires <span class="d-block display-6 fw-bold">4x4, SUV et Pick-up</span>
         </h2>
 
         <ul>
@@ -70,7 +70,7 @@
               <a class="link-light" href="/30522-couvre-benne-tonneau-rigide">Couvre benne</a></h3></li>
           <li>
             <h3 class="h6">
-              <a class="link-light" href="/30286-pare-buffle">Pare Buffle</a>
+              <a class="link-light" href="/30286-pare-buffle">Pare buffle</a>
             </h3>
           </li>
           <li>

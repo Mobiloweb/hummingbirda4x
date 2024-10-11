@@ -1,5 +1,5 @@
 <section class="container-fluid text-center mt-5 pb-5">
-    <h2 class="dyn-title"><span class="fw-normal d-block fs-6">TOUTES</span>NOS MARQUES</h2>
+    <h2 class="dyn-title text-uppercase"><span class="fw-normal d-block fs-6">Toutes</span>nos marques</h2>
 
     <div class="container position-relative">
         <ul class="glider-imgcats">

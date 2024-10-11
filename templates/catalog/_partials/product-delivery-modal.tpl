@@ -22,7 +22,7 @@
           <p>En tout état de cause <a href="http://www.accessauto4x4.com/">https://www.accessauto4x4.com</a> s'engage à livrer le produit commandé dans un délai maximum de trente (30) jours à compter de la validation de la commande (ou de l'enregistrement du chèque en cas de règlement par ce mode de paiement).</p>
           <p>Les articles composant une même commande sont, en principe, livrés en une seule fois. Exceptionnellement, <a href="http://www.accessauto4x4.com/">https://www.accessauto4x4.com</a> se réserve la possibilité de fractionner les livraisons. Dans ce cas, la participation aux frais d'expédition ne sera facturée que pour un seul envoi.</p>
           <p>Découvrez les délais de livraison que nous garantissons rubrique par rubrique pour la livraison de vos pièces détachées</p>
-          <h3>Accessoires intérieurs :</h3>
+          <p class="h3">Accessoires intérieurs :</p>
           <ul class="">
             <li class="my-2"><b>Accoudoir central</b> : livraison sous <b>2 à 10 jours</b> selon disponibilité – les modèles personnalisés sont réalisés sur commande sous 10/12 jours</li>
             <li class="my-2"><b>Bâche de Coffre spécifique</b> : livraison sous <b>15 à 18 jours ouvrés</b> selon disponibilité <em>(A cause de la pandémie sanitaire retard possible)</em></li>
@@ -34,7 +34,7 @@
             <li class="my-2"><span style="color: #c17901;"><b>Housses de sièges sur mesure</b>*</span> : réalisées sur commande en fonction de la configuration technique de votre véhicule : fabrication sous <b>3 à 4 semaines</b> puis livraison sous <b>3/4 jours ouvrés</b></li>
           </ul>
           <p><b><span style="color: #c17901;">* Produit réalisé à la commande</span></b></p>
-          <h3>Accessoires extérieurs :</h3>
+          <p class="h3">Accessoires extérieurs :</p>
           <ul>
             <li class="my-2"><b>Accessoires Extérieurs CHROME</b> : livraison sous <b>2/10 jours ouvrés</b> selon disponibilité</li>
             <li class="my-2"><b>Jantes acier</b> : livraison sous <b>3/5 jours ouvrés</b>, selon disponibilité</li>
@@ -46,7 +46,7 @@
             <li class="my-2"><b>Pare buffle</b> : réalisé à la commande, <b>délai de fabrication 2/3 semaines environ</b> puis livraison sous <b>3/4 jours ouvrés</b></li>
             <li class="my-2"><b>Visière Pare Soleil</b> : réalisé à la commande <b>: 2 semaines environ</b> selon disponibilité</li>
           </ul>
-          <h3>Accessoires extérieurs pick-up et 4x4 :</h3>
+          <p class="h3">Accessoires extérieurs pick-up et 4x4 :</p>
           <ul>
             <li class="my-2"><span style="color: #c17901;"><b>Protection avant / pare-buffle homologué CE*</b></span> : produit fabriqué sur commande <b>2/3 semaines</b> suivant la saison et ensuite expédié sous <b>3/4 jours ouvrés</b></li>
             <li class="my-2"><b>Tonneau cover</b> : livraison sous <b>6/15 jours ouvrés</b></li>

@@ -31,9 +31,9 @@
               {/if}
 
             {if $as_search.id_search == "2" && $page.page_name !== 'index'}
-              <h2 class="PM_ASearchTitle text-white my-2 text-uppercase">
+              <span class="PM_ASearchTitle text-white my-2 text-uppercase">
                 <span class="d-block">Sélectionnez</span> <b class="fs-1">votre véhicule</b>
-              </h2>
+              </span>
             {/if}
 
               {if $as_search.display_nb_result_on_blc}
