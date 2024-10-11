@@ -12,22 +12,22 @@
 
 <div class="{$headerCustomBannerName} d-flex justify-content-end px-2 align-items-center py-xl-2">
   {if $page.page_name === 'index'}
-    <h1 class="{$headerCustomBannerName}__title w-50 mb-0 d-none d-xl-inline ms-0 me-auto dyn-title">
-      ACCESSAUTO4X4, LE SPÉCIALISTE DE LA VENTE EN LIGNE D'ACCESSOIRES AUTO, 4X4, PICK-UP ET VÉHICULES UTILITAIRES
+    <h1 class="{$headerCustomBannerName}__title w-50 mb-0 d-none d-xl-inline ms-0 me-auto text-uppercase dyn-title">
+    AccessAuto4x4, le spécialiste de la vente en ligne d'accessoires auto, 4x4, pick-up et véhicules utilitaires
     </h1>
   {else}
-    <p class="{$headerCustomBannerName}__title w-50 mb-0 d-none d-xl-inline ms-0 me-auto">
-      ACCESSAUTO4X4, LE SPÉCIALISTE DE LA VENTE EN LIGNE D'ACCESSOIRES AUTO, 4X4, PICK-UP ET VÉHICULES UTILITAIRES
+    <p class="{$headerCustomBannerName}__title w-50 mb-0 d-none d-xl-inline ms-0 me-auto text-uppercase">
+    AccessAuto4x4, le spécialiste de la vente en ligne d'accessoires auto, 4x4, pick-up et véhicules utilitaires
     </p>
   {/if}
 
   <nav class="d-flex" aria-label="Menu de navigation secondaire">
     <div class="header-block d-none d-md-inline">
-      <a class="header-block__action-btn text-center text-nowrap" href="#">Catalogue d'accessoire</a>
+      <a class="header-block__action-btn text-center text-nowrap" href="/29815-recherche-par-type-d-accessoire" aria-label="Page de catalogue d'accessoires" title="Notre catalogue d'accessoires">Catalogue d'accessoires</a>
     </div>
 
     <div class="header-block d-none d-md-inline bg-primary">
-      <a class="header-block__action-btn text-white" href="#">Contact</a>
+      <a class="header-block__action-btn text-white" href="/contactez-nous" aria-label="Page de contact" title="Contactez-nous">Contact</a>
     </div>
 
     <div class="d-flex align-items-center nowrap">

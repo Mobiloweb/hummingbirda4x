@@ -1,0 +1,15 @@
+body#contact{
+    & .wrapper__left-column{
+        display:none
+    }
+    & .wrapper__content{
+        margin:auto;
+        margin-top:3rem;
+        & h1{
+            color:var(--bs-gray-800)
+        }
+    }
+    & .contact-form>form>footer{
+        justify-content:flex-start
+    }
+}

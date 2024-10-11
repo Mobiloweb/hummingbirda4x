@@ -35,9 +35,6 @@
     && empty($criterions_group.next_group_have_selected_values)
     && (($as_search.search_method != 2 && $as_search.search_method != 4) || $as_search.nb_visible_criterions_groups > 1)
     }
-      <a href="#" class="PM_ASSkipGroup text-white" rel="{$criterions_group.id_criterion_group|intval}">
-        {l s='Skip this step' mod='pm_advancedsearch4'}
-      </a>
     {/if}
   </div>
 </div>
