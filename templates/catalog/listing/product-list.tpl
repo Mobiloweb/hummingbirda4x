@@ -22,7 +22,7 @@
 {block name="top_page_title" append}
   <div class="container-fluid bg-light pt-3 pb-4 mb-4">
     {block name='product_list_header'}
-      <h1 id="js-product-list-header display-4 fw-bold" class="h2 mb-4">{$listing.label}</h1>
+      <h1 id="js-product-list-header display-4 fw-bold" class="mb-4">{$listing.label}</h1>
     {/block}
   </div>
 {/block}

@@ -28,7 +28,6 @@
         <div class="footer__menu-column--right">
           <p class="footer__menu-title bold-green-color">Informations</p>
           <ul class="d-flex flex-column gap-2 mb-0">
-            {* <li class="footer__menu-item"><a href="/blog" title="Consulter nos articles de notre blog" aria-label="Lien vers notre blog">Notre blog</a></li> *}
             <li class="footer__menu-item"><a href="/contactez-nous" title="Contactez-nous" aria-label="Lien vers la page de contact">Contactez-nous</a></li>
             <li class="footer__menu-item"><a href="/content/2-mentions-legales" title="Consulter les mentions légales" aria-label="Lien vers les mentions légales">Mentions légales</a></li>
             <li class="footer__menu-item"><a href="/content/8-conditions-generales-de-vente" title="Consulter les Conditions Générales de Vente" aria-label="Lien vers les Conditions Générales de Vente">Conditions Générales de Vente</a></li>
@@ -41,7 +40,7 @@
   </div>
   <div class="d-flex flex-column-reverse flex-sm-row pt-5">
     <div class="w-100 w-sm-50 text-center text-sm-start">
-      <p>Copyright 2024© - <span class="bold-green-color">Agence Mobiloweb</span>, tous droits réservés</p>
+      <p>Copyright 2024© - <a class="bold-green-color" href="https://mobiloweb.fr/" target="_blank" aria-label="Lien vers le site web de l'agence web qui a créé le site AccessAuto4x4" title="Site de Mobiloweb">Agence Mobiloweb</a>, tous droits réservés</p>
     </div>
     <div class="w-100 w-sm-50 text-center text-sm-end">
       <p>Visa - CB - Mastercard - Maestro - American Express - Paypal - iDEAL - Bancontact - SOFORT Banking - MyBank - Eps - Giropay - Przelewy24 KBC / CBC - Belfius Pay Button - Paiement en 3 ou 4 fois sans frais par carte via Oney</p>
