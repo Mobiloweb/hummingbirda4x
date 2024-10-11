@@ -4,14 +4,14 @@
  *}
 
 {* Full width layout only for "Recherche par Type d'Accessoire" and "RECHERCHER VOTRE PRODUIT" pages *}
-{if $category.id == '29815' || $category.id == '29814'}
+{if $category.id == '29815' || $category.id == '29814' || $as_search.id_search == '2' && $page.page_name == 'module-pm_advancedsearch4-searchresults'}
   {$layout = 'layouts/layout-full-width.tpl'}
 {/if}
 
 {* Full width layout if we are on the last category depth*}
-{if Category::getLastPosition($category['id'], $category['id_shop_default']) == 1}
-  {$layout = 'layouts/layout-full-width.tpl'}
-{/if}
+{*{if Category::getLastPosition($category['id'], $category['id_shop_default']) == 1}*}
+{*  {$layout = 'layouts/layout-full-width.tpl'}*}
+{*{/if}*}
 
 {extends file=$layout}
 
