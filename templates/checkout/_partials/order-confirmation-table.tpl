@@ -88,6 +88,8 @@
           {include file='catalog/_partials/product-customization-modal.tpl' product=$product}
         {/if}
 
+        {TotCustomFieldsOverride::getTextInput($product.id_product)}
+
         {hook h='displayProductPriceBlock' product=$product type="unit_price"}
       </div>
 
@@ -115,7 +117,7 @@
 
   <hr>
 
-  <div class="{$componentName}__totals fw-bold">
+  <div class="{$componentName}__totals">
     {if !$configuration.display_prices_tax_incl && $configuration.taxes_enabled}
       <div class="row">
         <div class="col-6">{$totals.total.label}&nbsp;{$labels.tax_short}</div>
@@ -127,16 +129,16 @@
         <div class="col-6 text-end">{$totals.total_including_tax.value}</div>
       </div>
     {else}
+      {if $subtotals.tax !== null && $subtotals.tax.label !== null}
+        <div class="row">
+          <div class="col-6 fw-normal">{l s='%label%:' sprintf=['%label%' => $subtotals.tax.label] d='Shop.Theme.Global'}</div>
+          <div class="col-6 fw-normal text-end">{$subtotals.tax.value}</div>
+        </div>
+      {/if}
+
       <div class="row fw-bold">
         <div class="col-6">{$totals.total.label}&nbsp;{if $configuration.taxes_enabled}{$labels.tax_short}{/if}</div>
         <div class="col-6 text-end">{$totals.total.value}</div>
-      </div>
-    {/if}
-
-    {if $subtotals.tax !== null && $subtotals.tax.label !== null}
-      <div class="row">
-        <div class="col-6">{l s='%label%:' sprintf=['%label%' => $subtotals.tax.label] d='Shop.Theme.Global'}</div>
-        <div class="col-6 text-end">{$subtotals.tax.value}</div>
       </div>
     {/if}
   </div>
