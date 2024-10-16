@@ -18,8 +18,8 @@
  *}
 
  <a class="col-lg-4 col-md-6 col-sm-6 col-xs-12 text-md-center text-left" id="psgdpr-link" href="{$front_controller}">
- <span class="link-item p-5 shadow">
-     <i class="material-icons">&#xE870;</i>
-     <p class="text-uppercase mb-0">{l s='GDPR - Personal data' mod='psgdpr'}</p>
+ <span class="link-item p-5 shadow justify-content-center align-items-center">
+     {include file="_svg/account_circle.svg"}
+     <p class="text-uppercase mt-3">{l s='GDPR - Personal data' mod='psgdpr'}</p>
  </span>
 </a>
