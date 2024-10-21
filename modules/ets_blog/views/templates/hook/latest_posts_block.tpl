@@ -60,7 +60,7 @@
                                 </p>                               
                             </div>
                         {/if}
-                        <a class="read_more" href="{$post.link|escape:'html':'UTF-8'}">{if $ets_blog_text_Readmore}{$ets_blog_text_Readmore|escape:'html':'UTF-8'}{else}{l s='Lire plus' mod='ets_blog'}{/if}</a>
+                        <a class="read_more" href="{$post.link|escape:'html':'UTF-8'}">Lire plus</a>
                     </div>
                 </li>
             {/foreach}

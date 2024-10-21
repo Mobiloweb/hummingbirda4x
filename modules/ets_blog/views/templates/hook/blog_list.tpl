@@ -79,9 +79,9 @@
             {/if}
         {/if}
     {elseif $month}
-        <h1 class="page-heading product-listing">{l s='Posted in: ' mod='ets_blog'}"{$month|escape:'html':'UTF-8'}"</h1>
+        <p class="page-heading product-listing">Posté dans : "{$month|escape:'html':'UTF-8'}"</p>
     {elseif $year}
-        <h1 class="page-heading product-listing">{l s='Posted in: ' mod='ets_blog'}"{$year|escape:'html':'UTF-8'}"</h1>
+        <p class="page-heading product-listing">Posté dans : "{$year|escape:'html':'UTF-8'}"</p>
     {/if}
     {if !($blog_category && (!isset($blog_category.enabled) || isset($blog_category.enabled) && !$blog_category.enabled)) && ($blog_category || $blog_search || $author || $is_main_page || $blog_latest || $month || $year) && (!$author || ($author && !isset($author.disabled)))}
         {if isset($blog_posts) && $blog_posts}
@@ -205,7 +205,7 @@
                 <div class="clearfix"></div>
             {/if}
         {else}
-            <p>{l s='No posts found' mod='ets_blog'}</p>
+            <p>Aucune publication trouvée</p>
         {/if}
     {/if}
 </div>

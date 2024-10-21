@@ -110,7 +110,7 @@
             {/if}
         </div>
         {else}
-            <p class="warning">{l s='No posts found' mod='ets_blog'}</p>
+            <p class="warning">Aucune publication trouvée</p>
         {/if}
         {if $blog_post.related_posts}
             <div class="ets-blog-related-posts ets_blog_related_posts_type_{if $blog_related_posts_type}{$blog_related_posts_type|escape:'html':'UTF-8'}{else}default{/if}">
