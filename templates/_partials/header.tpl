@@ -16,7 +16,7 @@
     AccessAuto4x4, le spécialiste de la vente en ligne d'accessoires auto, 4x4, pick-up et véhicules utilitaires
     </h1>
   {else}
-    <p class="{$headerCustomBannerName}__title w-50 mb-0 d-none d-xl-inline ms-0 me-auto text-uppercase">
+    <p class="{$headerCustomBannerName}__title w-50 mb-0 d-none d-xl-inline ms-0 me-auto text-uppercase fw-bold">
     AccessAuto4x4, le spécialiste de la vente en ligne d'accessoires auto, 4x4, pick-up et véhicules utilitaires
     </p>
   {/if}

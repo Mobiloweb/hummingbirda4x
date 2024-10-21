@@ -19,7 +19,7 @@
  {extends file='customer/page.tpl'}
 
  {block name='page_title'}
-   {l s='GDPR - Personal data' mod='psgdpr'}
+   RGPD - Données personnelles
  {/block}
  
  {block name='page_content'}
@@ -30,8 +30,8 @@
          <p>{l s='At any time, you have the right to retrieve the data you have provided to our site. Click on "Get my data" to automatically download a copy of your personal data on a pdf or csv file.' mod='psgdpr'}</p>
        </div>
        <div class="d-flex gap-3 justify-content-md-end justify-content-center flex-md-row flex-column">
-         <a id="exportDataToCsv" class="btn btn-white btn-lg m-0" target="_blank" href="{$psgdpr_csv_controller|escape:'htmlall':'UTF-8'}">{l s='Get my data to CSV' mod='psgdpr'}</a>
-         <a id="exportDataToPdf" class="btn btn-white btn-lg m-0" target="_blank" href="{$psgdpr_pdf_controller|escape:'htmlall':'UTF-8'}">{l s='Get my data to PDF' mod='psgdpr'}</a>
+         <a id="exportDataToCsv" class="btn btn-white btn-lg m-0" target="_blank" href="{$psgdpr_csv_controller|escape:'htmlall':'UTF-8'}">Exporter mes données en CSV</a>
+         <a id="exportDataToPdf" class="btn btn-white btn-lg m-0" target="_blank" href="{$psgdpr_pdf_controller|escape:'htmlall':'UTF-8'}">Exporter mes données en PDF</a>
        </div>
      </div>
      
